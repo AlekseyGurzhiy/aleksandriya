@@ -1,0 +1,8 @@
+body {
+    background: url("/app/views/img/bgd/back1.jpg") no-repeat;
+}
+
+.work-area {
+    border: 1px solid white;
+    background: rgba(255, 255, 255, 0.5);
+}
