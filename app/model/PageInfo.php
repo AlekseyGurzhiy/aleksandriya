@@ -5,6 +5,7 @@ class pageInfo
     public $title;
     public $code;
     public $role = 'guest';
+    public $text;
 
     public function getCode(): string
     {
@@ -34,5 +35,15 @@ class pageInfo
     public function setRole(string $role)
     {
         $this->role = $role;
+    }
+
+    public function getText(): string
+    {
+        return $this->text;
+    }
+
+    public function setText(string $text)
+    {
+        $this->text = $text;
     }
 }

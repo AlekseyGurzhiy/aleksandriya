@@ -15,6 +15,19 @@ class Pages
         ];
     }
 
+    public function getTextPages(): array
+    {
+        return [
+            'main' => 'Гостевой дом "Александрия"',
+            'photo' => 'Фотогалерея',
+            'price' => 'Цены на '.date('Y').' год',
+            'contacts' => 'Контакты',
+            'documents' => 'Документы',
+            'admin' => 'Админка',
+            'auth' => 'Авторизация',
+        ];
+    }
+
     public function getRolePages(): array
     {
         return [

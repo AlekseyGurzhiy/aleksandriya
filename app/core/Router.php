@@ -9,6 +9,7 @@ class Router
         $activePages = $pages->getActivePages();
         $rolePages = $pages->getRolePages();
         $errorPages = $pages->getErrorPages();
+        $textPages = $pages->getTextPages();
 
         $page = $this->getCurrentPage();
 
@@ -17,8 +18,9 @@ class Router
             $pageInfo->setCode($page);
             $pageInfo->setTitle($activePages[$page]);
             $pageInfo->setRole($rolePages[$page]);
+            $pageInfo->setText($textPages[$page]);
 
-            $this->render($pageInfo, $activePages, $rolePages);
+            $this->render($pageInfo, $activePages, $rolePages, $textPages);
         } else {
             $this->error('404');
         }
@@ -28,7 +30,7 @@ class Router
         return $_GET['page'] ?? 'main';
     }
 
-    public function render($pageInfo, $activePages, $rolePages){
+    public function render($pageInfo, $activePages, $rolePages, $textPages){
         require_once('app/views/template.php');
     }
 
