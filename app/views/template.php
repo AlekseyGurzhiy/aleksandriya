@@ -22,7 +22,10 @@
 <header>
     <nav class="navbar navbar-expand-md navbar-dark dropdown-menu-dark">
         <div class="container">
-            <a href="/auth/" class="navbar-brand col-4" style="font-size: 14pt;"><?echo $pageInfo->getText(); ?></a>
+            <a href="#" class="navbar-brand col-4" style="font-size: 14pt;">
+                <span class="d-none d-xxl-block">Гостевой дом "Александрия"</span><span class="d-inline d-xxl-none"><?echo $pageInfo->getText(); ?></span>
+            </a>
+
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="true" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -37,6 +40,9 @@
                     <a class="nav-link<?echo $activeClass?>" href="<?echo $path.$key.'/';?>"><?php echo $activePage;?></a>
                 </li>
                 <?php }} ?>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Войти</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -51,8 +57,8 @@
 </div>
 
 <footer class="footer mt-auto py-3 bg-dark">
-    <div class="container align-content-center">
-        <span class="text-muted">Официальный сайт гостевого дома "Александрия" copyright @ 2022 </span>
+    <div class="container text-center">
+        <span class="text-muted"> Александрия @ <?echo date('Y')?> </span>
     </div>
 </footer>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.bundle.min.js"></script>

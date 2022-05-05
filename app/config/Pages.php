@@ -18,7 +18,7 @@ class Pages
     public function getTextPages(): array
     {
         return [
-            'main' => 'Гостевой дом "Александрия"',
+            'main' => 'Александрия',
             'photo' => 'Фотогалерея',
             'price' => 'Цены на '.date('Y').' год',
             'contacts' => 'Контакты',
