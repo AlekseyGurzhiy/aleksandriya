@@ -16,7 +16,7 @@
     <!-- Подключаем скрипты -->
     <script src="/app/views/js/bootstrap.min.js"></script>
     <script src="/app/views/js/script.js"></script>
-    <title><? echo $pageInfo->getTitle();?></title>
+    <title><?echo $pageInfo->getTitle();?></title>
 </head>
 <body class="d-flex flex-column h-100">
 <header>
@@ -48,14 +48,12 @@
         </div>
     </nav>
 </header>
-
-<div class="container work-area h-100">
+<main>
 <?php
     $code = $pageInfo->getCode();
-    require_once('app/views/'.$code.'View.php');
+    require('app/views/'.$code.'View.php');
 ?>
-</div>
-
+</main>
 <footer class="footer mt-auto py-3 bg-dark">
     <div class="container text-center">
         <span class="text-muted"> Александрия @ <?echo date('Y')?> </span>

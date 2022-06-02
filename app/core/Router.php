@@ -31,10 +31,10 @@ class Router
     }
 
     public function render($pageInfo, $activePages, $rolePages, $textPages){
-        require_once('app/views/template.php');
+        require('app/views/template.php');
     }
 
     public function error($error){
-        require_once('app/views/error.php');
+        require('app/views/error.php');
     }
 }
